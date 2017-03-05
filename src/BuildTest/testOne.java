@@ -16,10 +16,10 @@ public class testOne extends allMethods{
 		driver.get("https://www.build.com/");
 		addItems();
 		shippingSteps();
-		driver.findElement(By.xpath("//*[@id=\"creditCardNumber\"]")).sendKeys("4111111111111111");
-		assertThat(driver.findElement(By.xpath("//*[@id=\"taxAmount\"]")).getText().equals("$0.00"));
+		driver.findElement(By.xpath(creditCardXpath)).sendKeys("4111111111111111");
+		assertThat(driver.findElement(By.xpath(taxCheckXpath)).getText().equals("$0.00"));
 		//Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"taxAmount\"]")).getText().equals("$0.00"));
-		assertThat(driver.findElement(By.xpath("//*[@id=\"grandtotalamount\"]")).getText().equals("$660.37"));
+		assertThat(driver.findElement(By.xpath(grandTotalXpath)).getText().equals("$660.37"));
 		//Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"grandtotalamount\"]")).getText().equals("$660.37"));
 	}
 	
